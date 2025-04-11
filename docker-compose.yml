@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  springboot-app:
+    image: maven:3.8.5-openjdk-17
+    container_name: springboot-dev
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8080:8080"
+    command: mvn spring-boot:run
